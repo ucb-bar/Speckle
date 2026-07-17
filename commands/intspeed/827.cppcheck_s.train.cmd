@@ -1,0 +1,1 @@
+cppcheck_s --cppcheck-build-dir=lua-5.4.7 --enable=all --disable=unusedFunction --suppress=toomanyconfigs --suppress=missingIncludeSystem --checkers-report=lua_report.txt lua-5.4.7 -j 4 --platform=unix64 > cppcheck_s.raw.out 2>> cppcheck_s.raw.err

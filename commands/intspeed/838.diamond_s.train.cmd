@@ -1,0 +1,1 @@
+Diamond blastp -q astral-scopedom-seqres-gd-sel-gs-bib-40-2.07.fa.gz -d astral-scopedom-seqres-gd-sel-gs-bib-40-2.07.fa.gz --mid-sensitive --outfmt 6 qseqid sseqid slen mismatch gapopen qstart qend sstart send nident bitscore -o astral40.tsv -p 4 > astral-scopedom-seqres-gd-sel-gs-bib-40-2.07.fa.gz.out 2>> astral-scopedom-seqres-gd-sel-gs-bib-40-2.07.fa.gz.err

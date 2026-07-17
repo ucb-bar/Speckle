@@ -1,0 +1,2 @@
+llvm-opt_r train.ll -S -O3 -mcpu=pwr9 --sha512 -o train.ll.opts-S_-O3_-mcpu_pwr9.ll > train.ll.opts-S_-O3_-mcpu_pwr9.out 2>> train.ll.opts-S_-O3_-mcpu_pwr9.err
+llvm-opt_r ELFObject.ll -S -O2 -inline-threshold=50000 -mcpu=pwr9 --sha512 -o ELFObject.ll.opts-S_-O2_-inline-threshold_50000_-mcpu_pwr9.ll > ELFObject.ll.opts-S_-O2_-inline-threshold_50000_-mcpu_pwr9.out 2>> ELFObject.ll.opts-S_-O2_-inline-threshold_50000_-mcpu_pwr9.err

@@ -1,0 +1,1 @@
+cppcheck_s --file-list=check_file_list -f --suppress=normalCheckLevelMaxBranches --checkers-report=report.txt --cppcheck-build-dir=src --disable=unusedFunction -j 4 --platform=unix64 > cppcheck_s.raw.out 2>> cppcheck_s.raw.err

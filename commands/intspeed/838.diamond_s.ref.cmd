@@ -1,0 +1,2 @@
+Diamond blastp -q uniprot_sprot.fasta.gz -d uniprot_sprot.fasta.gz --index-chunks 1 --fast --masking tantan --outfmt 6 qseqid sseqid slen mismatch gapopen qstart qend sstart send -o uniprot.tsv -p 4 > uniprot_sprot.fasta.gz.out 2>> uniprot_sprot.fasta.gz.err
+Diamond blastp -q cRAP.fasta.gz -d swissprot.fasta --ultra-sensitive --index-chunks 4 --block-size 2.8 --masking seg --evalue 0.0005 --outfmt 6 qseqid sseqid slen mismatch gapopen qstart qend sstart send -o cRAP.tsv -p 4 > cRAP.fasta.gz.out 2>> cRAP.fasta.gz.err
