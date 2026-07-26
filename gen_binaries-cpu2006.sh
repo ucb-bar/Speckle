@@ -121,13 +121,13 @@ if [ "$compileFlag" = true ]; then
 
     echo "Building target binaries with config: ${CONFIGFILE}"
     ( cd "${SPEC_DIR}" && . ./shrc && \
-      time runspec --verbose 10 --config ${CONFIG} --size ${input_type} \
+      time runspec --verbose 10 --config ${CONFIG}-cpu2006 --size ${input_type} \
                    --action build ${runspec_suite} \
         > "${build_dir}/${CONFIG}-${suite_type}-build.log" )
 
     echo "Compiling host binaries + materializing inputs with config: ${H_CONFIGFILE}"
     ( cd "${SPEC_DIR}" && . ./shrc && \
-      time runspec --verbose 10 --config ${H_CONFIG} --size ${input_type} \
+      time runspec --verbose 10 --config ${H_CONFIG}-cpu2006 --size ${input_type} \
                    --action runsetup ${runspec_suite} \
         > "${build_dir}/${H_CONFIG}-${suite_type}-build.log" )
 
@@ -216,7 +216,7 @@ fi
 if [ "$genCommandsFlag" = true ]; then
     log_file="${build_dir}/${suite_type}.${input_type}.fakerun.log"
     ( cd "${SPEC_DIR}" && . ./shrc && \
-      time runspec --config=${H_CONFIG} --fake --verbose 9 --size ${input_type} \
+      time runspec --config=${H_CONFIG}-cpu2006 --fake --verbose 9 --size ${input_type} \
                    --action=onlyrun ${runspec_suite} > "${log_file}" )
 
     bmarks=($(grep -nE "Running 4[0-9][0-9]" "${log_file}" | grep -Eo '[0-9]+\.[0-9a-zA-Z_]+'))
