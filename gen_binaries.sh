@@ -133,6 +133,7 @@ function generate_inputs
       # vpr: netlist/placement inputs are shipped xz-compressed
       if [[ $b == *.vpr_r || $b == *.vpr_s ]]; then
          for x in *.xz; do
+            [ -f "$x" ] || continue
             [ -f "${x%.xz}" ] || { echo "  specxz -d ${x}"; $SPEC_DIR/bin/specxz -dk "$x"; }
          done
       fi
